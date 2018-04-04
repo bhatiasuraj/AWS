@@ -11,11 +11,7 @@ from django.shortcuts import render, get_object_or_404
 
 def contact(request):
 
-    latest_questions = Question.objects.order_by('-pub_date')[:5]
-
-    context = {'latest_questions': latest_questions}
-
-    return render(request, 'polls/contact.html', context)
+    return render(request, 'polls/contact.html')
 
 
 def index(request):

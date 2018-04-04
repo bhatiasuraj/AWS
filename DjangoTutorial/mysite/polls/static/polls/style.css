@@ -1,0 +1,10 @@
+li a {
+
+    font-size: 20px ;
+    colour: red;
+}
+
+body {
+    colour: blue;
+    background: white url("images/vote.jpg") no-repeat;
+}

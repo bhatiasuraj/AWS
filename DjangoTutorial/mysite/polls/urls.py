@@ -1,12 +1,13 @@
 from django.urls import path
 from django.conf.urls import url
 from . import views
+from django.conf.urls import include
 
 urlpatterns = [
 
     path('', views.index, name='Index'),
 
-    path('', views.contact, name='Contact'),
+    path('contact/', include(('contact.urls', 'contact'), namespace='contact')),
 
     path('<question_id>', views.detail, name='detail'),
 

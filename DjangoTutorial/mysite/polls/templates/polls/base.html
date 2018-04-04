@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>voteVotevote!</title>
+</head>
+<body>
+
+<p> Welcome to my website! </p>
+
+<li><a href = {% url "polls:index" %}><b>Home Page</b></a></li>
+<hr>
+
+{% block main_content %}
+
+{% endblock %}
+
+{% include 'polls/footer.html' %}
+
+</body>
+</html>

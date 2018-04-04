@@ -9,6 +9,15 @@ from django.shortcuts import render, get_object_or_404
 # Create your views here.
 
 
+def contact(request):
+
+    latest_questions = Question.objects.order_by('-pub_date')[:5]
+
+    context = {'latest_questions': latest_questions}
+
+    return render(request, 'polls/contact.html', context)
+
+
 def index(request):
 
     latest_questions = Question.objects.order_by('-pub_date')[:5]
@@ -45,10 +54,6 @@ def vote(request, question_id):
         selected_choice.save()
         return HttpResponseRedirect(reverse('polls:results', args=question_id,))
 
-
-def contact(request):
-
-    return render(request, 'polls/contact.html')
 
 
 

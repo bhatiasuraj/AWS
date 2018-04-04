@@ -1,3 +1,15 @@
-<p> <li><a href = {% url 'contact' %}><b>Contact Us</b></a></li></p>
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+</style>
 
-
+<div class="footer">
+    <ul><a href= {% url 'polls:index' %}><b>Contact Us</b></a></ul>
+</div> 

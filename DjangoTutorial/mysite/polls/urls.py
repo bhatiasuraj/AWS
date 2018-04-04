@@ -6,6 +6,8 @@ urlpatterns = [
 
     path('', views.index, name='Index'),
 
+    path('', views.contact, name='Contact'),
+
     path('<question_id>', views.detail, name='detail'),
 
     path('', views.index, name="index"),
@@ -15,7 +17,5 @@ urlpatterns = [
     url('(?P<question_id>[0-9]+)/results$', views.results, name="results"),
 
     url('(?P<question_id>[0-9]+)/vote$', views.vote, name="vote"),
-
-path('', views.contact, name='Contact'),
 
 ]

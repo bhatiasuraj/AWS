@@ -6,9 +6,24 @@
 </head>
 <body>
 
-<p> Welcome to my website! </p>
+<style>
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+</style>
 
-<li><a href = {% url "polls:index" %}><b>Home Page</b></a></li>
+<div class="header">
+    <p> <b>Welcome to my website! </b></p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<strong><a href = {% url "polls:index" %}><b><strong>Home Page</strong></b></a></li>
 <hr>
 
 {% block main_content %}
